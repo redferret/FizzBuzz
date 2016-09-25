@@ -19,6 +19,12 @@ public class FizzBuzz {
      */
     public static String[] fizzBuzz(int start, int finish){
         
+        if (start > finish){
+            throw new IllegalArgumentException("start must be less than finish");
+        }else if (start < 0 || finish < 0){
+            throw new IllegalArgumentException("Both start and finish can't be negative");
+        }
+        
         int length = finish - start;
         String[] output = new String[length];
         
