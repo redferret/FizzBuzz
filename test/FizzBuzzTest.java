@@ -24,6 +24,16 @@ public class FizzBuzzTest {
         
     }
     
+    @Test(expected = IllegalArgumentException.class)
+    public void fizzBuzzInvalidParamsRangeTest(){
+        FizzBuzz.fizzBuzz(10, 2);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void fizzBuzzInvalidParamsTest(){
+        FizzBuzz.fizzBuzz(-5, 2);
+    }
+    
     @Test
     public void fizzBuzzTest(){
         
