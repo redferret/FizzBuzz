@@ -18,7 +18,28 @@ public class FizzBuzz {
      * length of the array is (finish - start).
      */
     public static String[] fizzBuzz(int start, int finish){
-        return null;
+        
+        int length = finish - start;
+        String[] output = new String[length];
+        
+        for (int i = start; i < finish; i++){
+            
+            boolean divBy3 = i % 3 == 0;
+            boolean divBy5 = i % 5 == 0;
+            
+            if (divBy3 && divBy5){
+                output[i] = "Fizz Buzz";
+            }else if (divBy3){
+                output[i] = "Fizz";
+            }else if (divBy5){
+                output[i] = "Buzz";
+            }else{
+                output[i] = Integer.toString(i);
+            }
+            
+        }
+        
+        return output;
     }
     
 }
