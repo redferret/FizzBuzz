@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class FizzBuzzTest {
     
     @Test
-    public void fizzBuzzMethodTest(){
+    public void fizzBuzzOutputLengthTest(){
         
         int start = 0;
         int finish = 20;
@@ -21,6 +21,16 @@ public class FizzBuzzTest {
         Integer expectedLength = finish - start;
         Integer actualLength = output.length;
         assertEquals("Lengths don't match", expectedLength, actualLength);
+        
+    }
+    
+    @Test
+    public void fizzBuzzTest(){
+        
+        int start = 0;
+        int finish = 20;
+        
+        String[] output = FizzBuzz.fizzBuzz(start, finish);
         
         String expectedStr = "Fizz";
         String actualStr = output[3];
