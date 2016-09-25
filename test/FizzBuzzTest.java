@@ -32,6 +32,8 @@ public class FizzBuzzTest {
         
         String[] output = FizzBuzz.fizzBuzz(start, finish);
         
+        assertNotNull("The output is null", output);
+        
         String expectedStr = "Fizz";
         String actualStr = output[3];
         assertEquals("Output is incorrect", expectedStr, actualStr);
