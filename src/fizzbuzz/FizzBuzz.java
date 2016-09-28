@@ -33,14 +33,16 @@ public class FizzBuzz {
             boolean divBy3 = i % 3 == 0;
             boolean divBy5 = i % 5 == 0;
             
+            int index = i % length;
+            
             if (divBy3 && divBy5){
-                output[i] = "Fizz Buzz";
+                output[index] = "Fizz Buzz";
             }else if (divBy3){
-                output[i] = "Fizz";
+                output[index] = "Fizz";
             }else if (divBy5){
-                output[i] = "Buzz";
+                output[index] = "Buzz";
             }else{
-                output[i] = Integer.toString(i);
+                output[index] = Integer.toString(i);
             }
             
         }

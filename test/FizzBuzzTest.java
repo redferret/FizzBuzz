@@ -65,4 +65,31 @@ public class FizzBuzzTest {
         assertEquals("Output is incorrect", expectedStr, actualStr);
     }
     
+    @Test
+    public void fizzBuzzOffsetRangeTest(){
+        
+        int start = 10;
+        int finish = 20;
+        
+        String[] output = FizzBuzz.fizzBuzz(start, finish);
+        
+        assertNotNull("The output is null", output);
+        
+        String expectedStr = "Buzz";
+        String actualStr = output[0];
+        assertEquals("Output is incorrect", expectedStr, actualStr);
+        
+        expectedStr = "Fizz Buzz";
+        actualStr = output[5];
+        assertEquals("Output is incorrect", expectedStr, actualStr);
+        
+        expectedStr = "16";
+        actualStr = output[6];
+        assertEquals("Output is incorrect", expectedStr, actualStr);
+        
+        expectedStr = "17";
+        actualStr = output[7];
+        assertEquals("Output is incorrect", expectedStr, actualStr);
+        
+    }
 }
