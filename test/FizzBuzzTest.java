@@ -44,25 +44,11 @@ public class FizzBuzzTest {
         
         assertNotNull("The output is null", output);
         
-        String expectedStr = "Fizz";
-        String actualStr = output[3];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
+        testCase("Fizz", output[3]);
+        testCase("Buzz", output[5]);
+        testCase("Fizz Buzz", output[15]);
+        testCase("1", output[1]);
         
-        expectedStr = "Fizz";
-        actualStr = output[3];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
-        
-        expectedStr = "Buzz";
-        actualStr = output[5];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
-        
-        expectedStr = "Fizz Buzz";
-        actualStr = output[15];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
-        
-        expectedStr = "1";
-        actualStr = output[1];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
     }
     
     @Test
@@ -75,21 +61,15 @@ public class FizzBuzzTest {
         
         assertNotNull("The output is null", output);
         
-        String expectedStr = "Buzz";
-        String actualStr = output[0];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
-        
-        expectedStr = "Fizz Buzz";
-        actualStr = output[5];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
-        
-        expectedStr = "16";
-        actualStr = output[6];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
-        
-        expectedStr = "17";
-        actualStr = output[7];
-        assertEquals("Output is incorrect", expectedStr, actualStr);
+        testCase("Buzz", output[0]);
+        testCase("Fizz Buzz", output[5]);
+        testCase("16", output[6]);
+        testCase("17", output[7]);
         
     }
+    
+    private void testCase(String expectedStr, String actualStr){
+        assertEquals("Output is incorrect", expectedStr, actualStr);
+    }
+    
 }
